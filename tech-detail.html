@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Detail | The Nth Power</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Specific overrides for detail page */
+        .detail-hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: radial-gradient(circle at center, #1a0505 0%, #000 70%);
+        }
+
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
+        .back-link:hover {
+            color: var(--accent-red);
+        }
+
+        .detail-logo {
+            height: 80px;
+            margin-bottom: 2rem;
+            filter: brightness(0) invert(1);
+            /* Default to white */
+        }
+
+        .detail-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .detail-subtitle {
+            font-family: 'Inter', sans-serif;
+            color: var(--accent-red);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .detail-desc {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 8vw;
+            background: #050101;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-red);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .detail-hero {
+                padding-top: 6rem;
+            }
+
+            .detail-title {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-link">← Back to Overview</a>
+
+    <div class="detail-hero">
+        <img id="tech-logo" src="" alt="Logo" class="detail-logo">
+        <h1 id="tech-title" class="detail-title">Loading...</h1>
+        <p id="tech-subtitle" class="detail-subtitle"></p>
+        <p id="tech-description" class="detail-desc"></p>
+    </div>
+
+    <div id="tech-features" class="features-grid">
+        <!-- Features populated by JS -->
+    </div>
+
+    <script>
+        const techData = {
+            'sap': {
+                title: 'SAP S/4HANA & Analytics',
+                subtitle: 'Enterprise Core',
+                desc: 'We specialize in SAP financial transformation, leveraging S/4HANA Group Reporting and SAP Analytics Cloud to unify your financial data and drive real-time insights.',
+                logo: 'assets/sap.png',
+                features: [
+                    { title: 'Group Reporting', desc: 'Consolidate efficiently with continuous accounting and real-time data access.' },
+                    { title: 'SAP Analytics Cloud', desc: 'Planning, predictive analytics, and business intelligence in one intuitive solution.' },
+                    { title: 'S/4HANA Finance', desc: 'Streamline financial operations with the power of in-memory computing.' }
+                ]
+            },
+            'oracle': {
+                title: 'Oracle Cloud EPM',
+                subtitle: 'Connected Planning',
+                desc: 'Our Oracle practice delivers comprehensive EPM Cloud solutions, from Financial Consolidation and Close (FCCS) to Enterprise Planning and Budgeting (EPBCS).',
+                logo: 'assets/oracle.png',
+                features: [
+                    { title: 'FCCS', desc: 'Best-in-class consolidation and close process management.' },
+                    { title: 'Planning (EPBCS)', desc: 'Connect operational and financial planning across the enterprise.' },
+                    { title: 'Narrative Reporting', desc: 'Collaborative reporting specifically designed for management and regulatory needs.' }
+                ]
+            },
+            'onestream': {
+                title: 'OneStream',
+                subtitle: 'Intelligent Finance',
+                desc: 'Unify your financial processes with OneStream’s intelligent finance platform. We simplify complexity by replacing multiple legacy systems with a single, extensible solution.',
+                logo: 'assets/onestream.png',
+                features: [
+                    { title: 'Extensible Dimensionality', desc: 'Support corporate standards while delivering business unit relevance.' },
+                    { title: 'Financial Data Quality', desc: 'Guided workflows ensuring 100% transparency and auditability.' },
+                    { title: 'Marketplace Solutions', desc: 'Extend validatiion with 50+ pre-built solutions like Account Reconciliations.' }
+                ]
+            },
+            'anaplan': {
+                title: 'Anaplan',
+                subtitle: 'Connected Planning',
+                desc: 'Drive dynamic, collaborative planning across your organization. We build Connected Planning ecosystems that link finance, sales, and supply chain strategies.',
+                logo: 'assets/anaplan.png',
+                features: [
+                    { title: 'Hyperblock Technology', desc: 'Calculate massive models in real-time for instant scenario analysis.' },
+                    { title: 'Sales Performance', desc: 'Optimize territories, quotas, and incentive compensation.' },
+                    { title: 'Supply Chain', desc: 'Align demand and supply with financial goals.' }
+                ]
+            },
+            'azure': {
+                title: 'Microsoft Azure',
+                subtitle: 'Data & AI Foundation',
+                desc: 'Build a modern data estate with Azure. We architect secure, scalable data lakes and analytics platforms that power your financial intelligence.',
+                logo: 'assets/azure.png',
+                features: [
+                    { title: 'Synapse Analytics', desc: 'Limitless analytics service with unmatched time to insight.' },
+                    { title: 'Power BI', desc: 'Bridge the gap between data and decision making with interactive visualizations.' },
+                    { title: 'Data Factory', desc: 'Hybrid data integration at enterprise scale.' }
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const platform = params.get('platform');
+        const data = techData[platform];
+
+        if (data) {
+            document.getElementById('tech-title').innerText = data.title;
+            document.getElementById('tech-subtitle').innerText = data.subtitle;
+            document.getElementById('tech-description').innerText = data.desc;
+            document.getElementById('tech-logo').src = data.logo;
+            
+            // Invert OneStream logo for visibility on dark background if needed (already handled by CSS class in some cases, but doing it here ensures it works)
+            if(platform === 'onestream') {
+                 // The CSS filter in style block handles general logos, but specific tweaks:
+                 document.getElementById('tech-logo').style.filter = 'invert(1) brightness(1) contrast(1.1)';
+            } else {
+                 // Default white filter for others (logos are usually colored but on dark bg we might want them white or specific)
+                 // The CSS above sets brightness(0) invert(1) for .detail-logo which makes everything white.
+                 // If we want original colors, we should remove that filter.
+                 // For now, let's keep them white for the "premium" look, or reset if they are colored pngs.
+                 document.getElementById('tech-logo').style.filter = 'brightness(0) invert(1)';
+            }
+
+            const grid = document.getElementById('tech-features');
+            data.features.forEach(f => {
+                const card = document.createElement('div');
+                card.className = 'feature-card';
+                card.innerHTML = `<h3>${f.title}</h3><p>${f.desc}</p>`;
+                grid.appendChild(card);
+            });
+
+            gsap.from('.detail-hero', { opacity: 0, y: -20, duration: 1 });
+            gsap.from('.feature-card', { opacity: 0, y: 30, stagger: 0.1, delay: 0.5 });
+        } else {
+            document.getElementById('tech-title').innerText = 'Technology Not Found';
+            document.getElementById('tech-logo').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
