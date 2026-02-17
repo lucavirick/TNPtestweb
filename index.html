@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nth Power | EPM Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <div id="loader-overlay">
+        <img src="logo.png" class="loader-logo" alt="Loading...">
+    </div>
+
+    <div class="noise-overlay"></div>
+
+    <div class="noise-overlay"></div>
+
+    <nav class="floating-nav">
+        <div class="nav-pill">
+            <a href="#technologies" class="nav-item">Technologies</a>
+            <div class="nav-dropdown">
+                <a href="#services" class="nav-item">Services</a>
+                <div class="nav-dropdown-content">
+                    <a href="#implementation">Implementation Services</a>
+                    <a href="#managed">Managed Services</a>
+                    <a href="#cloud">Cloud Migration</a>
+                </div>
+            </div>
+            <a href="#solutions" class="nav-item">Solutions</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#contact" class="nav-item">Contact</a>
+            <div class="nav-indicator"></div>
+        </div>
+    </nav>
+
+    <main class="hero-container">
+
+        <div class="central-emblem">
+            <img src="logo.png" alt="The Nth Power" class="central-logo-img">
+        </div>
+
+        <p class="hero-subtitle">We implement and optimize enterprise performance management systems, <br>helping
+            organizations operate at their Nth Power.</p>
+
+        <div class="cta-group">
+            <button class="btn-primary">Start Your Transformation</button>
+            <button class="btn-secondary">Learn More</button>
+        </div>
+
+        <!-- The canvas acts as the 'web' feeding into the center -->
+        <div id="canvas-container"></div>
+    </main>
+    <section id="technologies" class="tech-section">
+        <div class="tech-container">
+            <div class="section-header center">
+                <span class="section-tag">TECHNOLOGY STACK</span>
+                <h2 class="section-title">Our Technology Stack</h2>
+                <div class="header-line"></div>
+                <p class="section-subtitle">Delivered by Expert Consultants</p>
+            </div>
+
+            <div class="tech-showcase">
+
+
+                <a href="tech-detail.html?platform=oracle" class="tech-item-link">
+                    <div class="tech-item" data-platform="oracle">
+                        <div class="tech-border">
+                            <div class="border-segment top"></div>
+                            <div class="border-segment right"></div>
+                            <div class="border-segment bottom"></div>
+                            <div class="border-segment left"></div>
+                        </div>
+                        <div class="tech-inner">
+                            <div class="logo-container">
+                                <img src="assets/oracle.png" alt="Oracle">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="tech-detail.html?platform=onestream" class="tech-item-link">
+                    <div class="tech-item" data-platform="onestream">
+                        <div class="tech-border">
+                            <div class="border-segment top"></div>
+                            <div class="border-segment right"></div>
+                            <div class="border-segment bottom"></div>
+                            <div class="border-segment left"></div>
+                        </div>
+                        <div class="tech-inner">
+                            <div class="logo-container">
+                                <img src="assets/onestream.png" alt="OneStream">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="tech-detail.html?platform=aws" class="tech-item-link">
+                    <div class="tech-item" data-platform="aws">
+                        <div class="tech-border">
+                            <div class="border-segment top"></div>
+                            <div class="border-segment right"></div>
+                            <div class="border-segment bottom"></div>
+                            <div class="border-segment left"></div>
+                        </div>
+                        <div class="tech-inner">
+                            <div class="logo-container">
+                                <img src="assets/aws.png" alt="AWS">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="tech-detail.html?platform=azure" class="tech-item-link">
+                    <div class="tech-item" data-platform="azure">
+                        <div class="tech-border">
+                            <div class="border-segment top"></div>
+                            <div class="border-segment right"></div>
+                            <div class="border-segment bottom"></div>
+                            <div class="border-segment left"></div>
+                        </div>
+                        <div class="tech-inner">
+                            <div class="logo-container">
+                                <img src="assets/azure.png" alt="Azure">
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container services-container">
+            <div class="section-header center">
+                <span class="section-tag">OUR EXPERTISE</span>
+                <h2 class="section-title">End-to-End Financial Transformation</h2>
+                <div class="header-line"></div>
+                <p class="section-subtitle">Delivering precision, scalability, and strategic value for the world's most
+                    complex organizations.</p>
+            </div>
+
+            <div class="services-wrapper">
+
+                <!-- 1. Implementation Services (Full Width) -->
+                <div class="service-expanded-block implementation-expanded" id="implementation">
+                    <div class="service-expanded-header">
+                        <div class="service-icon-large implementation-icon"></div>
+                        <div class="service-header-text">
+                            <h3>EPM Implementation</h3>
+                            <span class="service-tagline">Architecting the Future of Finance</span>
+                        </div>
+                    </div>
+
+                    <div class="service-expanded-body">
+                        <div class="service-main-desc">
+                            <p>We do not simply install software; we re-engineer the financial backbone of your
+                                enterprise.
+                                Our implementation methodology is forged from decades of experience delivering for
+                                Fortune
+                                500 leaders, ensuring that every deployment is a strategic step forward, not just a
+                                technical upgrade.</p>
+                            <p>From multi-currency consolidations to predictive AI-driven forecasting, our solutions are
+                                resilient, audit-ready, and built to scale with your ambition.</p>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="detail-column">
+                                <h4>Strategic Architecture</h4>
+                                <ul>
+                                    <li>Target Operating Model Design</li>
+                                    <li>Global Chart of Accounts (COA) Optimization</li>
+                                    <li>Legacy System Decommissioning Strategy</li>
+                                    <li>Cloud Readiness & Infrastructure Planning</li>
+                                </ul>
+                            </div>
+                            <div class="detail-column">
+                                <h4>Delivery Excellence</h4>
+                                <ul>
+                                    <li>Agile & Waterfall Hybrid Methodologies</li>
+                                    <li>Rigorous User Acceptance Testing (UAT) Cycles</li>
+                                    <li>Data Quality & Integrity Validation</li>
+                                    <li>Executive Change Management & Communication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Managed Services (Full Width) -->
+                <div class="service-expanded-block managed-expanded" id="managed">
+                    <div class="service-expanded-header">
+                        <div class="service-icon-large managed-icon"></div>
+                        <div class="service-header-text">
+                            <h3>Managed Services</h3>
+                            <span class="service-tagline">Operational Continuity & Evolution</span>
+                        </div>
+                    </div>
+
+                    <div class="service-expanded-body">
+                        <div class="service-main-desc">
+                            <p>The "Go-Live" is only the beginning. Our Managed Services practice operates as an
+                                extension
+                                of your Office of the CFO, providing not just support, but continuous evolution. We
+                                ensure
+                                your systems remain performant, compliant, and aligned with shifting business realities.
+                            </p>
+                            <p>We mitigate the risk of talent turnover and technical debt, giving your team the freedom
+                                to
+                                focus on analysis rather than administration.</p>
+                        </div>
+
+                        <div class="service-details-grid">
+                            <div class="detail-column">
+                                <h4>Strategic Support</h4>
+                                <ul>
+                                    <li>24/7 Global Follow-the-Sun Support Model</li>
+                                    <li>Critical Period "Close Care" Assistance</li>
+                                    <li>Incident Management & Root Cause Analysis</li>
+                                    <li>SLA-Backed Performance Guarantees</li>
+                                </ul>
+                            </div>
+                            <div class="detail-column">
+                                <h4>Continuous Evolution</h4>
+                                <ul>
+                                    <li>Proactive System Health Checks & Tuning</li>
+                                    <li>Center of Excellence (CoE) Advisory</li>
+                                    <li>Automated Patch Management & Testing</li>
+                                    <li>Roadmap Planning & New Feature Adoption</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Cloud Migration (Full Width) -->
+                <div class="service-expanded-block cloud-expanded" id="cloud">
+                    <div class="service-expanded-header">
+                        <div class="service-icon-large cloud-icon"></div>
+                        <div class="service-header-text">
+                            <h3>Cloud Migration</h3>
+                            <span class="service-tagline">ARCHITECTURE MODERNIZATION & PLATFORM REALIGNMENT</span>
+                        </div>
+                    </div>
+                    <div class="service-expanded-body">
+                        <div class="service-main-desc">
+                            <p>Legacy EPM environments accumulate technical debt that limits scalability. A structured
+                                cloud migration allows for architectural rationalization and platform modernization
+                                without disrupting critical reporting cycles.</p>
+                            <p>We assess and migrate complex environments across OneStream, SAP, and Oracle platforms.
+                                By retiring redundant components and standardizing integration patterns, we deliver a
+                                cloud-aligned architecture that supports elastic compute and secure access.</p>
+                        </div>
+                        <div class="service-details-grid">
+                            <div class="detail-column">
+                                <h4>Architecture & Migration</h4>
+                                <ul>
+                                    <li>Legacy System Decommissioning Strategy</li>
+                                    <li>Metadata & Calculation Logic Optimization</li>
+                                    <li>Secure Identity & Access Management Redesign</li>
+                                    <li>Parallel Close Testing & Variance Analysis</li>
+                                </ul>
+                            </div>
+                            <div class="detail-column">
+                                <h4>Operational Continuity</h4>
+                                <ul>
+                                    <li>Seamless Transition to Managed Services</li>
+                                    <li>Post-Go-Live Hypercare & Stabilization</li>
+                                    <li>Automated Patch Governance & Release Management</li>
+                                    <li>Ongoing Performance Monitoring & Tuning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">SOLUTIONS</span>
+                <h2 class="section-title">Specialized Enterprise Capabilities</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-num">01</div>
+                    <h4>Strategic Modeling</h4>
+                    <p>Long-range planning and scenario analysis to drive informed executive decisions.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-num">02</div>
+                    <h4>Narrative Reporting</h4>
+                    <p>Streamlined regulatory and management reporting with collaborative authoring.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-num">03</div>
+                    <h4>Account Reconciliation</h4>
+                    <p>Automated balance sheet substantiation and transaction matching.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-num">04</div>
+                    <h4>Data Integration</h4>
+                    <p>Seamless ETL processes connecting ERPs, HRIS, and EPM platforms.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-num">05</div>
+                    <h4>Process Automation</h4>
+                    <p>Workflow optimization to reduce cycle times and manual intervention.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-num">06</div>
+                    <h4>Financial Planning & Analysis</h4>
+                    <p>Robust budgeting and forecasting models tailored to your industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <span class="section-tag">ABOUT US</span>
+                <h2 class="section-title">The Nth Power Legacy</h2>
+                <div class="header-line-left"></div>
+                <p>Founded in 2003 by Robert Nichols, The Nth Power has grown into a premier boutique consulting firm
+                    based in Greenwich, CT, trusted by leading organizations to deliver clarity, precision, and
+                    measurable results across their financial technology landscape.</p>
+                <p>For over two decades, we have partnered with Fortune 500 companies to solve their most complex
+                    financial system challenges. Our philosophy is simple: combine deep technical expertise with a
+                    hands-on, collaborative approach that empowers clients to achieve lasting transformation—not just
+                    temporary fixes.</p>
+                <p>At The Nth Power, we believe that every project deserves senior-level attention, thoughtful strategy,
+                    and an unwavering commitment to excellence. Our team brings decades of real-world experience across
+                    financial systems, process optimization, data architecture, and digital transformation. We pride
+                    ourselves on being not just advisors, but true partners—working side-by-side with your teams to
+                    design solutions that are robust, scalable, and aligned with your long-term vision.</p>
+                <p>Driven by integrity, curiosity, and a passion for problem-solving, we continue to help the world’s
+                    most influential companies modernize their financial systems and unlock new levels of performance.
+                    With The Nth Power, you gain more than consultants—you gain a trusted ally dedicated to elevating
+                    your operations to the next power.</p>
+
+
+            </div>
+            <div class="about-visual">
+                <div class="about-image-mask">
+                    <img src="assets/about-office.png" alt="Our Methodology" id="about-img">
+                </div>
+                <div class="about-stats-mini">
+                    <div class="mini-stat">EST. <span>2003</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">CONTACT</span>
+                    <h2 class="section-title">Start Your Transformation</h2>
+                    <div class="header-line-left"></div>
+                    <p>Ready to optimize your enterprise performance? Connect with our expert team to discuss your
+                        specific needs.</p>
+
+                    <div class="contact-methods" style="margin-top: 2rem;">
+                        <div class="contact-link">
+                            <span>📧</span> <a href="mailto:info@thenthpower.com">info@thenthpower.com</a>
+                        </div>
+                    </div>
+
+                    <div class="downloads-group">
+                        <button class="btn-primary" style="width: 100%;">Book a Consultation</button>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <!-- NOTE: To make this form work, sign up at Formspree.io and replace 'YOUR_FORM_ID' with your actual Form ID -->
+                    <form id="contact-form" class="precision-form" action="https://formspree.io/f/xeelkrvz"
+                        method="POST">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label>NAME</label>
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-group">
+                                <label>COMPANY</label>
+                                <input type="text" name="company" placeholder="Organization">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>EMAIL</label>
+                            <input type="email" name="email" placeholder="email@company.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>MESSAGE</label>
+                            <textarea name="message" rows="4" placeholder="Tell us about your company's requirements..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <img src="logo.png" alt="The Nth Power" class="footer-tiny-logo">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/the-nth-power-inc." target="_blank">LinkedIn</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+            <span>© 2024 The Nth Power. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
