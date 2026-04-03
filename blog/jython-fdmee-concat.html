@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Case study: A practical guide to cleaner FDMEE scripts, demonstrating how The Nth Power uses Jython to create deterministic composite keys for improved integration performance.">
+    <link rel="canonical" href="https://www.thenthpower.com/blog/jython-fdmee-concat.html">
+    <meta property="og:title" content="Jython FDMEE Data Flows Case Study | The Nth Power">
+    <meta property="og:description"
+        content="Case study: A practical guide to cleaner FDMEE scripts, demonstrating how The Nth Power uses Jython to create deterministic composite keys for improved integration performance.">
+    <meta property="og:url" content="https://www.thenthpower.com/blog/jython-fdmee-concat.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://www.thenthpower.com/img/The-Nth-Power-Logo.png">
+    <title>Jython FDMEE Data Flows Case Study | The Nth Power</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/The-Nth-Power-Favicon.png">
+    <link rel="stylesheet" href="../css/blog.css">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Jython FDMEE Data Flows Case Study",
+  "description": "A practical guide to cleaner FDMEE scripts, demonstrating how The Nth Power uses Jython to create deterministic composite keys for improved integration performance.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Nth Power Inc.",
+    "logo": { "@type": "ImageObject", "url": "https://www.thenthpower.com/img/The-Nth-Power-Logo.png" }
+  },
+  "url": "https://www.thenthpower.com/blog/jython-fdmee-concat.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thenthpower.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.thenthpower.com/#insights" },
+    { "@type": "ListItem", "position": 3, "name": "Jython FDMEE Data Flows", "item": "https://www.thenthpower.com/blog/jython-fdmee-concat.html" }
+  ]
+}
+</script>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="floating-nav">
+        <div class="nav-pill">
+            <a href="../solutions/data-integration.html" class="nav-item">Back to Solution</a>
+            <a href="../index.html" class="nav-item">Home</a>
+            <a href="../index.html#contact" class="nav-item">Contact</a>
+        </div>
+    </nav>
+
+    <article>
+        <header class="blog-post-header">
+            <div class="container" style="max-width: 1250px;">
+                <span class="blog-post-meta">Data Architecture / Strategy / Integration</span>
+                <h1>Architecting Resilient Data Flows:<br><span style="white-space: nowrap;">The Logic of
+                        Simplification</span></h1>
+            </div>
+        </header>
+
+        <div class="container blog-post-content">
+            <p>In the landscape of enterprise systems, complexity is the default state. A common pitfall in designing
+                integrations is attempting to mirror the complexity of the source data directly within the mapping
+                logic.</p>
+
+            <h2>Client Goals</h2>
+            <p>Eliminate fragile integrations relying on thousands of conditional nested rules (e.g., "If Account is X
+                and Department is Y"). Improve transparency, auditability, and integration performance.</p>
+
+            <h2>What We Did</h2>
+            <p>Shifted complex logic out of platform-specific DSLs and utilized Jython to create <strong>composite
+                    keys</strong> early in the ETL pipeline. By concatenating relevant source dimensions—such as Account
+                and Movement—into a single, deterministic identifier, we transformed a multi-variate logic problem into
+                a simple 1-to-1 mapping exercise.</p>
+
+            <h2>Results</h2>
+            <ul>
+                <li><strong>Clarity and Auditability:</strong> Traceability is immediate using a single mapping table
+                    instead of the black box of script logic.</li>
+                <li><strong>Performance Optimization:</strong> Moving to single string key indexed lookups reduced
+                    processing time from hours to minutes.</li>
+                <li><strong>Platform Agnosticism:</strong> The generalized concatenation pattern made the integration
+                    portable across systems.</li>
+            </ul>
+
+            <p>This philosophy—simplifying complexity through rigorous design—is central to our <em>NTELLIGENCE</em>
+                methodology.</p>
+
+            <a href="../index.html" class="back-link">&larr; Back to Home</a>
+        </div>
+    </article>
+
+
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/the-nth-power-inc." target="_blank">LinkedIn</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms-of-service.html">Terms of Service</a>
+            </div>
+            <span>2026 The Nth Power. All rights reserved.</span>
+        </div>
+    </footer>
+</body>
+
+</html>
