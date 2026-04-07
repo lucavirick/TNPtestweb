@@ -151,7 +151,8 @@ body {
 @media (max-width: 900px) {
     .solution-hero {
         height: auto;
-        padding: 8rem 0 4rem 0;
+        min-height: unset;
+        padding: 8rem 0 1.5rem 0;
     }
 
     .solution-title {
@@ -169,11 +170,11 @@ body {
     }
 
     .insights-section {
-        padding: 2rem 0 6rem 0;
+        padding: 0.5rem 0 6rem 0;
     }
 
     .blog-grid {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
 }
 
