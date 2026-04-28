@@ -955,8 +955,8 @@ button {
 }
 
 .testimonial-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 2rem;
     border-radius: 4px;
     display: flex;
@@ -966,8 +966,8 @@ button {
 }
 
 .testimonial-card:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.32);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .client-logo-container {
