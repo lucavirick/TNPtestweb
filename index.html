@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53MEC9MQPQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-53MEC9MQPQ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -13,7 +22,7 @@
     <meta property="og:url" content="https://www.thenthpower.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="The Nth Power">
-    <meta property="og:image" content="https://www.thenthpower.com/img/The-Nth-Power-Logo.png">
+    <meta property="og:image" content="https://www.thenthpower.com/img/OG-TAG-The-Nth-Power.png">
     <meta name="robots" content="index, follow">
 
     <title>The Nth Power | Technical Consulting &amp; Solutions</title>
@@ -55,6 +64,14 @@
       {
         "@context": "https://schema.org",
         "@type": "Service",
+        "serviceType": "Ntelligence - AI Native Development Platform",
+        "provider": { "@type": "Organization", "name": "The Nth Power Inc." },
+        "description": "Agentic AI consulting through Ntelligence, a proprietary framework for multi-agent orchestration, retrieval augmented generation (RAG), and policy-enforced governance integrated with enterprise platforms.",
+        "areaServed": "US"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
         "serviceType": "Technical Implementation Consulting",
         "provider": { "@type": "Organization", "name": "The Nth Power Inc." },
         "description": "Enterprise architecture and disciplined execution for technology implementations spanning enterprise applications, data platforms, automation frameworks, and AI-enabled workflows.",
@@ -93,6 +110,7 @@
             <div class="nav-dropdown">
                 <a href="#services" class="nav-item">Services</a>
                 <div class="nav-dropdown-content">
+                    <a href="#ai">Ntelligence</a>
                     <a href="#implementation">Technical Implementation</a>
                     <a href="#managed">Managed Services</a>
                     <a href="#cloud">Cloud Migration</a>
@@ -127,10 +145,12 @@
                 <span class="section-tag">DEFINING EXCELLENCE</span>
                 <h2 class="section-title">What is <i style="color: var(--accent-red); font-style: italic; margin-right: 8px;">N</i>TELLIGENCE?</h2>
                 <div class="header-line-left"></div>
-                <p>A fusion of The Nth Power's philosophy of limitless potential and a new standard of intelligence that
-                    goes beyond technology alone.</p>
-                <p>It represents the ability to combine human insight, strategic thinking, and smart systems into
-                    exponential impact, because true transformation is not just software.</p>
+                <p>Ntelligence is The Nth Power's approach to AI that goes beyond deploying models. It's
+                    a framework for building intelligent systems that reason, act, and learn within your
+                    enterprise.</p>
+                <p>By combining human insight with our AI Native Development Platform, grounded retrieval,
+                    and disciplined governance, Ntelligence turns AI from a point solution into an
+                    autonomous capability embedded across your operations.</p>
                 <p style="font-weight: bold; font-family: 'Outfit', sans-serif;">
                     <i style="color: var(--accent-red); font-style: italic; margin-right: 2px;">N</i>TELLIGENCE: Not
                     just software. Intelligence to the <i style="color: var(--accent-red); font-style: italic; margin-right: 2px;">N</i>TH degree.
@@ -191,7 +211,49 @@
 
             <div class="services-wrapper">
 
-                <!-- 1. Implementation Services (Full Width) -->
+                <!-- 1. Artificial Intelligence Consulting / NTELLIGENCE Agentic Approach (Full Width) -->
+                <div class="service-expanded-block ai-expanded" id="ai">
+                    <div class="service-expanded-header">
+                        <div class="service-icon-large ai-icon"></div>
+                        <div class="service-header-text">
+                            <h4>Ntelligence - AI Native Development Platform</h4>
+                            <h5 class="service-tagline">ENTERPRISE AI SOLUTIONS &amp; AGENTIC AUTOMATION</h5>
+                        </div>
+                    </div>
+                    <div class="service-expanded-body">
+                        <div class="service-main-desc">
+                            <p>The Nth Power stands at the forefront of agentic AI adoption. Through Ntelligence,
+                                our proprietary framework, engagements move beyond model deployment toward
+                                multi-agent orchestration with grounded reasoning.</p>
+                            <p>Ntelligence is architected around multi-agent coordination, retrieval augmented
+                                generation (RAG), and policy-enforced governance. Solutions integrate natively with
+                                enterprise platforms, unlocking autonomous capabilities across finance, operations,
+                                and decision support.</p>
+                        </div>
+                        <div class="service-details-grid">
+                            <div class="detail-column">
+                                <p class="detail-label">NTELLIGENCE ARCHITECTURE</p>
+                                <ul>
+                                    <li>Multi-Agent Orchestration Design</li>
+                                    <li>Retrieval-Augmented Generation &amp; Knowledge Graph Pipelines</li>
+                                    <li>Tool-Use Orchestration &amp; API Abstraction</li>
+                                    <li>Agentic Workflow Engineering</li>
+                                </ul>
+                            </div>
+                            <div class="detail-column">
+                                <p class="detail-label">ENTERPRISE DEPLOYMENT</p>
+                                <ul>
+                                    <li>Governance, Compliance &amp; Risk Controls</li>
+                                    <li>Agent Trace Observability &amp; Behavioral Telemetry</li>
+                                    <li>Guardrail Enforcement &amp; Policy-as-Code Alignment</li>
+                                    <li>Human-in-the-Loop Oversight Models</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Implementation Services (Full Width) -->
                 <div class="service-expanded-block implementation-expanded" id="implementation">
                     <div class="service-expanded-header">
                         <div class="service-icon-large implementation-icon"></div>
@@ -225,7 +287,7 @@
                             <div class="detail-column">
                                 <p class="detail-label">DELIVERY DISCIPLINE</p>
                                 <ul>
-                                    <li>Agile–Hybrid Program Execution</li>
+                                    <li>Agile&ndash;Hybrid Program Execution</li>
                                     <li>Integrated Testing &amp; Quality Engineering</li>
                                     <li>Controls, Observability &amp; Data Integrity</li>
                                     <li>Executive-Level Program Governance</li>
@@ -364,7 +426,7 @@
                     delivering high-impact financial technology solutions to leading enterprises.</p>
                 <p>For more than twenty years, we have partnered with Fortune 500 organizations to address complex
                     financial systems challenges with precision and technical depth. Our focus is straightforward:
-                    senior-level expertise, disciplined execution, and solutions built for long-term performance—not
+                    senior-level expertise, disciplined execution, and solutions built for long-term performance&mdash;not
                     temporary workarounds.</p>
                 <p>We bring deep experience across financial systems, data architecture, process optimization, and
                     digital transformation, working alongside client teams to design scalable, resilient platforms
