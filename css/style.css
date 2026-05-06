@@ -1620,7 +1620,6 @@ button {
 
     /* SLIM DOWN MOBILE: Visually hide verbose text (SEO: content stays in DOM for crawlers) */
     .service-main-desc,
-    .about-content p:not(:first-of-type),
     .solution-card h4 {
         position: absolute;
         width: 1px;
@@ -1750,15 +1749,17 @@ button {
         padding: 0 0.3rem;
     }
 
-    .nav-dropdown-content {
-        position: fixed;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        transform: none;
-        border-radius: 20px 20px 0 0;
-        padding: 1rem;
+    /* Mobile: services dropdown is hover-only and doesn't work on touch.
+       Hide the sub-menu entirely. The "Services" link itself still works
+       and scrolls to #services. */
+    .nav-dropdown-content,
+    .nav-dropdown::after {
+        display: none !important;
+    }
+    .nav-dropdown:hover .nav-dropdown-content {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
 
     /* Ensure About text is readable but minimal */
