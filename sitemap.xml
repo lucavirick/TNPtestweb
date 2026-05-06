@@ -24,13 +24,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Consultation -->
-  <url>
-    <loc>https://www.thenthpower.com/consultation</loc>
-    <lastmod>2026-04-27</lastmod>
-    <priority>0.5</priority>
-  </url>
-
   <!-- Blogs / Case Studies -->
   <url>
     <loc>https://www.thenthpower.com/blog/finance-process-automation</loc>

@@ -266,4 +266,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 8. CUSTOM ANCHOR SCROLL
+    // When any in-page anchor link is clicked, scroll so the section's
+    // eyebrow (.section-tag) — or first heading if no eyebrow — lands
+    // a comfortable distance below the floating nav, with breathing room.
+    // Offset is calculated dynamically from the actual nav element so
+    // it adapts to any viewport / nav size.
+    const navEl = document.querySelector('.floating-nav');
+    const BREATHING_ROOM = 28; // px between nav bottom and eyebrow top
+
+    function getNavOffset() {
+        if (!navEl) return 96;
+        const navRect = navEl.getBoundingClientRect();
+        // navRect.bottom is where the nav visually ends (relative to viewport)
+        return Math.ceil(navRect.bottom + BREATHING_ROOM);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href || href === '#') return;
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            // Prefer scrolling to the visible heading inside the section,
+            // not the section's outer top (which is buried in padding).
+            const focal = target.querySelector('.section-tag')
+                       || target.querySelector('h1, h2, h3, h4')
+                       || target;
+
+            e.preventDefault();
+
+            const focalY = focal.getBoundingClientRect().top + window.scrollY;
+            const scrollTo = focalY - getNavOffset();
+
+            window.scrollTo({
+                top: scrollTo,
+                behavior: 'smooth'
+            });
+
+            // Update URL fragment so browser back-button + bookmarks work
+            if (history.pushState) {
+                history.pushState(null, '', href);
+            }
+        });
+    });
 });

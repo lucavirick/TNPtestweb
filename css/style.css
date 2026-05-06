@@ -1098,14 +1098,37 @@ button {
 
 /* Contact Section */
 .contact-section {
-    padding: 6rem 0;
+    padding: 6rem 0 3rem;
     background: #000;
+    scroll-margin-top: 0;       /* 96 desired - 96 padding = 0 */
+    min-height: 100vh;
 }
+
+/* ──────────────────────────────────────────────
+   ANCHOR SCROLL OFFSETS
+   When a nav link is clicked, scroll the section
+   so its eyebrow (.section-tag) lands ~96px from
+   viewport top — directly below the floating nav,
+   skipping the section's own padding-top.
+   Formula: scroll-margin-top = 96 − padding-top
+   ────────────────────────────────────────────── */
+.tech-section        { scroll-margin-top: 2.5rem; }   /* padding ≈ 4vw */
+.services-section    { scroll-margin-top: 2rem; }     /* padding 4rem */
+.solutions-section   { scroll-margin-top: 0; }        /* padding 6rem */
+.about-section       { scroll-margin-top: 3rem; }     /* padding 3rem */
+.ntelligence-section { scroll-margin-top: -2rem; }    /* padding 8rem */
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 6rem;
+    align-items: start;
+}
+
+/* Center the booking column's heading, eyebrow, and subtext to match the
+   centered email + address below them */
+.contact-info {
+    text-align: center;
 }
 
 .contact-link {
@@ -1274,6 +1297,7 @@ button {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     padding: 0;
+    scroll-margin-top: 5rem;          /* land block top below floating nav when navigated via dropdown */
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
