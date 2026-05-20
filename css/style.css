@@ -1644,8 +1644,8 @@ button {
     }
 
     .contact-section {
-        padding: 4rem 0 8rem 0 !important;
-        /* Extra bottom padding to prevent button cutoff */
+        min-height: auto;
+        padding: 3rem 0 2rem !important;
     }
 
     /* Mobile Carousel for Testimonials */
