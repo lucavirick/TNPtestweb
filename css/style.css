@@ -238,8 +238,8 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 8vw;
-    /* Spacing from edges */
+    padding: 0 min(8vw, 9.6rem);
+    /* Spacing from edges; capped at 1920px value so ultrawide keeps full content width */
 }
 
 .hero-subtitle {
@@ -263,8 +263,8 @@ body {
 }
 
 button {
-    padding: 1.5vw 3vw;
-    /* Scalable padding */
+    padding: min(1.5vw, 1.8rem) min(3vw, 3.6rem);
+    /* Scalable padding, capped at 1920px value */
     border-radius: 50px;
     border: none;
     font-size: clamp(10px, 1.2vw, 16px);
@@ -281,7 +281,7 @@ button {
 .btn-primary {
     display: inline-block;
     /* Ensure anchor tags behave like blocks */
-    padding: 1.5vw 3vw;
+    padding: min(1.5vw, 1.8rem) min(3vw, 3.6rem);
     border-radius: 50px;
     border: none;
     font-size: clamp(10px, 1.2vw, 16px);
@@ -1024,8 +1024,8 @@ button {
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 8vw;
-    /* Spacing from edges */
+    padding: 0 min(8vw, 9.6rem);
+    /* Spacing from edges; capped at 1920px value so ultrawide keeps full content width */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1774,7 +1774,7 @@ button {
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5vw;
+    padding: 0 min(5vw, 6rem);
 }
 
 .ntelligence-visual {
