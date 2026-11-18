@@ -665,17 +665,34 @@ img { max-width: 100%; height: auto; }
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
     font-size: 13px;
     color: var(--text-muted);
+    text-align: center;
+}
+.lp-footer-logo {
+    height: 28px;
+    width: auto;
+    opacity: 0.6;
+}
+.lp-footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .lp-footer a {
     color: var(--text-muted);
 }
 .lp-footer a:hover {
     color: var(--text-secondary);
+}
+.lp-footer-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 /* ── SVG check icon color ── */
