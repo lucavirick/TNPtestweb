@@ -1,7 +1,7 @@
 :root {
     --bg-dark: #1E2A32;
-    --bg-section: #F6F8FA;
-    --bg-card: #FFFFFF;
+    --bg-section: #F4F5F7;
+    --bg-card: #FAFAFA;
     --border-color: #E5E8EC;
     --border-subtle: #D5DBE1;
     --accent-red: #dc2626;
@@ -9,7 +9,7 @@
     --text-primary: #17202A;
     --text-secondary: #3A4A56;
     --text-muted: #5B6B78;
-    --white: #FFFFFF;
+    --white: #FAFBFC;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
