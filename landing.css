@@ -676,7 +676,8 @@ img { max-width: 100%; height: auto; }
 
 /* ── Footer ── */
 .lp-footer {
-    border-top: 1px solid var(--border-color);
+    background: var(--bg-dark);
+    color: rgba(255,255,255,0.6);
 }
 .lp-footer .container {
     padding-top: 24px;
@@ -702,10 +703,10 @@ img { max-width: 100%; height: auto; }
     justify-content: center;
 }
 .lp-footer a {
-    color: var(--text-muted);
+    color: rgba(255,255,255,0.6);
 }
 .lp-footer a:hover {
-    color: var(--text-secondary);
+    color: rgba(255,255,255,0.9);
 }
 .lp-footer-copy {
     display: flex;
