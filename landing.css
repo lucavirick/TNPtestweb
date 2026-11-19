@@ -1,15 +1,15 @@
 :root {
     --bg-dark: #1E2A32;
-    --bg-section: #F4F5F7;
-    --bg-card: #FAFAFA;
-    --border-color: #E5E8EC;
-    --border-subtle: #D5DBE1;
+    --bg-section: #F5F5F4;
+    --bg-card: #FAFAF9;
+    --border-color: #E8E7E5;
+    --border-subtle: #D8D6D3;
     --accent-red: #dc2626;
     --primary-red: #7f1d1d;
     --text-primary: #17202A;
-    --text-secondary: #3A4A56;
-    --text-muted: #5B6B78;
-    --white: #FAFBFC;
+    --text-secondary: #3D4A50;
+    --text-muted: #5F6B70;
+    --white: #FAFAF9;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -228,16 +228,9 @@ img { max-width: 100%; height: auto; }
     gap: 16px 40px;
 }
 .lp-trust-logos img {
-    height: 32px;
+    height: 48px;
     width: auto;
     object-fit: contain;
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: opacity 0.2s, filter 0.2s;
-}
-.lp-trust-logos img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
 }
 .lp-trust-badges {
     margin-left: auto;
@@ -257,11 +250,10 @@ img { max-width: 100%; height: auto; }
 /* ── Section base (light) ── */
 .lp-section {
     padding: 80px 0;
+    border-top: 1px solid var(--border-color);
 }
 .lp-section-alt {
     background: var(--bg-section);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
 }
 .lp-section-tag {
     font-size: 13px;
@@ -597,6 +589,8 @@ img { max-width: 100%; height: auto; }
 /* ── CTA + Form ── */
 .lp-cta {
     padding: 88px 0;
+    background: var(--bg-section);
+    border-top: 1px solid var(--border-color);
 }
 .lp-cta .container {
     display: flex;
@@ -639,7 +633,7 @@ img { max-width: 100%; height: auto; }
     display: flex;
     flex-direction: column;
     gap: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
 }
 .lp-form-row {
     display: grid;
