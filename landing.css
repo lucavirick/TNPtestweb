@@ -690,9 +690,10 @@ img { max-width: 100%; height: auto; }
     text-align: center;
 }
 .lp-footer-logo {
-    height: 28px;
+    height: 40px;
     width: auto;
-    opacity: 0.6;
+    max-width: 240px;
+    object-fit: contain;
 }
 .lp-footer-links {
     display: flex;
