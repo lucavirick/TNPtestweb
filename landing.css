@@ -213,24 +213,39 @@ img { max-width: 100%; height: auto; }
     text-transform: uppercase;
     color: var(--text-muted);
 }
-.lp-trust-industries {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 36px;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text-secondary);
+.lp-trust-label { flex: none; }
+.lp-logo-marquee {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
-.lp-trust-logos {
+.lp-logo-track {
     display: flex;
-    flex-wrap: wrap;
+    width: max-content;
+    animation: lp-logo-scroll 45s linear infinite;
+}
+.lp-logo-marquee:hover .lp-logo-track { animation-play-state: paused; }
+.lp-logo-set {
+    display: flex;
     align-items: center;
-    gap: 16px 40px;
+    gap: 56px;
+    padding-right: 56px;
 }
-.lp-trust-logos img {
-    height: 48px;
+.lp-logo-set img {
+    flex: none;
+    height: 40px;
     width: auto;
+    max-width: 170px;
     object-fit: contain;
+}
+@keyframes lp-logo-scroll {
+    to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .lp-logo-track { animation: none; }
+    .lp-logo-marquee { overflow-x: auto; }
 }
 .lp-trust-badges {
     margin-left: auto;
@@ -415,6 +430,7 @@ img { max-width: 100%; height: auto; }
     display: flex;
     flex-wrap: wrap;
     gap: 48px;
+    align-items: center;
 }
 .lp-proof-content {
     flex: 1 1 520px;
@@ -674,30 +690,6 @@ img { max-width: 100%; height: auto; }
     color: var(--text-muted);
 }
 
-/* ── About strip ── */
-.lp-about-strip {
-    background: var(--bg-section);
-    border-top: 1px solid var(--border-color);
-    padding: 32px 0;
-    text-align: center;
-}
-.lp-about-text {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    max-width: 540px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-.lp-about-text a {
-    color: var(--text-primary);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-.lp-about-text a:hover {
-    color: var(--accent-red);
-}
-
 /* ── Footer ── */
 .lp-footer {
     background: var(--bg-dark);
@@ -731,6 +723,17 @@ img { max-width: 100%; height: auto; }
 }
 .lp-footer a:hover {
     color: rgba(255,255,255,0.9);
+}
+.lp-footer-about {
+    font-size: 14px;
+}
+.lp-footer-about a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.lp-footer-about a:hover {
+    color: #FFFFFF;
 }
 .lp-footer-copy {
     display: flex;
@@ -855,4 +858,13 @@ img { max-width: 100%; height: auto; }
     .lp-proof-metrics { grid-template-columns: 1fr; }
     .lp-form-row { grid-template-columns: 1fr; }
     .lp-trust-badges { margin-left: 0; }
+    .lp-logo-marquee { flex-basis: 100%; }
+    .lp-logo-set { gap: 40px; padding-right: 40px; }
+    .lp-logo-set img { height: 32px; max-width: 130px; }
+    .hide-mobile,
+    .lp-stats-panel,
+    .lp-pain-card:nth-child(n+3),
+    .lp-proof-metrics { display: none; }
+    .lp-section, .lp-cta { padding: 56px 0; }
+    .lp-hero { padding: 56px 0 48px; }
 }
