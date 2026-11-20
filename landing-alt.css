@@ -789,6 +789,23 @@ img { max-width: 100%; height: auto; }
     color: var(--text-muted);
 }
 
+/* ── Form about link ── */
+.lp-form-about {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+.lp-form-about a {
+    color: var(--accent-red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.lp-form-about a:hover {
+    color: #e02424;
+}
+
 /* ── Footer ── */
 .lp-footer {
     background: var(--bg-dark);
