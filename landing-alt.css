@@ -993,3 +993,14 @@ img { max-width: 100%; height: auto; }
         color: var(--text-secondary);
     }
 }
+
+/* Keep the closing "No junior analysts..." line of the hero description on one line */
+@media (min-width: 1024px) {
+    .lp-hero-desc { max-width: 640px; }
+    .lp-hero-desc-line { white-space: nowrap; }
+}
+
+/* Between phone and laptop widths the stats boxes wrap under the text and push the trust strip off screen */
+@media (max-width: 1100px) {
+    .lp-stats-panel { display: none; }
+}
